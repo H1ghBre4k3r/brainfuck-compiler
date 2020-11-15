@@ -24,6 +24,14 @@ char* generateCodeFromBf(const char* bf) {
             case DECREMENT:
                 cCode = "(*p)--;";
                 break;
+
+            case MOVE_RIGHT:
+                cCode = "p++;";
+                break;
+
+            case MOVE_LEFT:
+                cCode = "p--;";
+                break;
         }
         if (cCode != NULL) {
             code = realloc(code, strlen(code) + strlen(cCode) + 1);
