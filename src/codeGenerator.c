@@ -44,6 +44,10 @@ char* generateCodeFromBf(const char* bf) {
             case PRINT_CHAR:
                 cCode = "printf(\"%c\", *p);";
                 break;
+
+            case GET_CHAR:
+                cCode = "*p = getChar();";
+                break;
         }
         if (cCode != NULL) {
             code = realloc(code, strlen(code) + strlen(cCode) + 1);
