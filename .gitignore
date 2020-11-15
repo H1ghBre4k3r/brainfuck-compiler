@@ -1,6 +1,11 @@
 # Prerequisites
 *.d
 
+build/*
+!build/.gitkeep
+generated/*
+!generated/.gitkeep
+
 # Object files
 *.o
 *.ko
