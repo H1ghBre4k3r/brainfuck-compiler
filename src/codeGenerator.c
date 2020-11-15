@@ -32,6 +32,18 @@ char* generateCodeFromBf(const char* bf) {
             case MOVE_LEFT:
                 cCode = "p--;";
                 break;
+
+            case START_LOOP:
+                cCode = "do {";
+                break;
+
+            case END_LOOP:
+                cCode = "} while((*p));";
+                break;
+
+            case PRINT_CHAR:
+                cCode = "printf(\"%c\", *p);";
+                break;
         }
         if (cCode != NULL) {
             code = realloc(code, strlen(code) + strlen(cCode) + 1);
