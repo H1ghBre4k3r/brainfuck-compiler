@@ -34,11 +34,11 @@ char* generateCodeFromBf(const char* bf) {
                 break;
 
             case START_LOOP:
-                cCode = "do {";
+                cCode = " while((*p)) {";
                 break;
 
             case END_LOOP:
-                cCode = "} while((*p));";
+                cCode = "}";
                 break;
 
             case PRINT_CHAR:
